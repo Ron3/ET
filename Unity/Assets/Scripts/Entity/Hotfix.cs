@@ -60,20 +60,22 @@ namespace ETModel
 			this.appDomain = new ILRuntime.Runtime.Enviorment.AppDomain();
 			GameObject code = (GameObject)Game.Scene.GetComponent<ResourcesComponent>().GetAsset("code.unity3d", "Code");
 			byte[] assBytes = code.Get<TextAsset>("Hotfix.dll").bytes;
-			byte[] mdbBytes = code.Get<TextAsset>("Hotfix.pdb").bytes;
+			// byte[] mdbBytes = code.Get<TextAsset>("Hotfix.pdb").bytes;
 
 			using (MemoryStream fs = new MemoryStream(assBytes))
-			using (MemoryStream p = new MemoryStream(mdbBytes))
+			// using (MemoryStream p = new MemoryStream(mdbBytes))
 			{
-				this.appDomain.LoadAssembly(fs, p, new Mono.Cecil.Pdb.PdbReaderProvider());
+				// this.appDomain.LoadAssembly(fs, p, new Mono.Cecil.Pdb.PdbReaderProvider());
+				this.appDomain.LoadAssembly(fs, null, null);
 			}
 
 			this.start = new ILStaticMethod(this.appDomain, "ETHotfix.Init", "Start", 0);
 #else
 			GameObject code = (GameObject)Game.Scene.GetComponent<ResourcesComponent>().GetAsset("code.unity3d", "Code");
 			byte[] assBytes = code.Get<TextAsset>("Hotfix.dll").bytes;
-			byte[] mdbBytes = code.Get<TextAsset>("Hotfix.mdb").bytes;
-			this.assembly = Assembly.Load(assBytes, mdbBytes);
+			// byte[] mdbBytes = code.Get<TextAsset>("Hotfix.mdb").bytes;
+			// this.assembly = Assembly.Load(assBytes, mdbBytes);
+			this.assembly = Assembly.Load(assBytes, null);
 
 			Type hotfixInit = this.assembly.GetType("ETHotfix.Init");
 			this.start = new MonoStaticMethod(hotfixInit, "Start");

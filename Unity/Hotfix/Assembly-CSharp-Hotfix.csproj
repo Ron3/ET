@@ -114,6 +114,7 @@
     <Compile Include="Module\Message\MessagePool.cs" />
     <Compile Include="Module\Message\Session.cs" />
     <Compile Include="Module\Message\SessionComponent.cs" />
+    <Compile Include="Base\Object\IComponentSerialize.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Assembly-CSharp-firstpass.csproj">
