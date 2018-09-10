@@ -1,0 +1,1 @@
+{"monsterList":[{"UID":1,"Hp":11,"Atk":12,"Def":13,"KEY_INFO_ID":10001},{"UID":2,"Hp":21,"Atk":22,"Def":23,"KEY_INFO_ID":10002},{"UID":3,"Hp":31,"Atk":32,"Def":33,"KEY_INFO_ID":10003},{"UID":4,"Hp":41,"Atk":42,"Def":43,"KEY_INFO_ID":10004}]}

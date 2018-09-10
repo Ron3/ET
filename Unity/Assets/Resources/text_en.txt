@@ -1,0 +1,4 @@
+text_start=start
+text_pause=pause
+text_street_name=street 777
+text_stage_name=China

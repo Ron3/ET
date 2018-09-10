@@ -1,0 +1,4 @@
+text_start=开始
+text_pause=暂停
+text_street_name=街区777简
+text_stage_name=广州简

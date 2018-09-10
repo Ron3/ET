@@ -115,6 +115,9 @@
     <Compile Include="Module\Message\Session.cs" />
     <Compile Include="Module\Message\SessionComponent.cs" />
     <Compile Include="Base\Object\IComponentSerialize.cs" />
+    <Compile Include="BP\BPInfo\BPCardInfo.cs" />
+    <Compile Include="BP\BPUICode\BPCommon.cs" />
+    <Compile Include="BP\BPUICode\BPGlobalDefine.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Assembly-CSharp-firstpass.csproj">
